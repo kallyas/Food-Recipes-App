@@ -1,7 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<!--TODO #2 this is a layout for detailed activity, please note the id-->
-
 <androidx.coordinatorlayout.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
@@ -19,7 +16,7 @@
         android:fitsSystemWindows="true"
         android:theme="@style/AppBarLayoutTheme">
 
-        <com.google.android.material.appbar.CollapsingToolbarLayout
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
             android:id="@+id/collapsing_toolbar"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -43,7 +40,7 @@
                 app:layout_collapseMode="pin"
                 app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
 
-        </com.google.android.material.appbar.CollapsingToolbarLayout>
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>>
     </com.google.android.material.appbar.AppBarLayout>
 
 
@@ -151,7 +148,7 @@
                 android:drawablePadding="10dp"
                 android:drawableEnd="@drawable/ic_info"
                 android:drawableRight="@drawable/ic_info" />
-            
+
             <androidx.cardview.widget.CardView
                 app:cardUseCompatPadding="true"
                 app:cardCornerRadius="10dp"
@@ -171,7 +168,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
             </androidx.cardview.widget.CardView>
-            
 
             <androidx.cardview.widget.CardView
                 app:cardUseCompatPadding="true"
@@ -180,53 +176,53 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp">
-               <LinearLayout
-                   android:layout_width="match_parent"
-                   android:layout_height="wrap_content"
-                   android:orientation="vertical">
-                   <TextView
-                       android:paddingLeft="14dp"
-                       android:paddingRight="14dp"
-                       android:layout_marginTop="14dp"
-                       android:text="@string/Ingredients"
-                       android:textColor="@color/colorPrimaryDark"
-                       android:layout_width="match_parent"
-                       android:layout_height="wrap_content" />
-                   <LinearLayout
-                       android:layout_marginBottom="20dp"
-                       android:orientation="horizontal"
-                       android:layout_width="match_parent"
-                       android:layout_height="wrap_content">
-                       <LinearLayout
-                           android:layout_width="match_parent"
-                           android:layout_height="wrap_content"
-                           android:orientation="vertical"
-                           android:layout_weight="1">
-                           <TextView
-                               android:id="@+id/ingredient"
-                               android:paddingLeft="14dp"
-                               android:paddingRight="14dp"
-                               android:textSize="16sp"
-                               android:textColor="@color/colorPrimaryText"
-                               android:layout_width="match_parent"
-                               android:layout_height="wrap_content" />
-                       </LinearLayout>
-                       <LinearLayout
-                           android:layout_width="match_parent"
-                           android:layout_height="wrap_content"
-                           android:orientation="vertical"
-                           android:layout_weight="1">
-                           <TextView
-                               android:id="@+id/measure"
-                               android:paddingLeft="14dp"
-                               android:paddingRight="14dp"
-                               android:textSize="16sp"
-                               android:textColor="@color/colorPrimaryText"
-                               android:layout_width="match_parent"
-                               android:layout_height="wrap_content" />
-                       </LinearLayout>
-                   </LinearLayout>
-               </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:paddingLeft="14dp"
+                        android:paddingRight="14dp"
+                        android:layout_marginTop="14dp"
+                        android:text="@string/Ingredients"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <LinearLayout
+                        android:layout_marginBottom="20dp"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_weight="1">
+                            <TextView
+                                android:id="@+id/ingredient"
+                                android:paddingLeft="14dp"
+                                android:paddingRight="14dp"
+                                android:textSize="16sp"
+                                android:textColor="@color/colorPrimaryText"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_weight="1">
+                            <TextView
+                                android:id="@+id/measure"
+                                android:paddingLeft="14dp"
+                                android:paddingRight="14dp"
+                                android:textSize="16sp"
+                                android:textColor="@color/colorPrimaryText"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
             </androidx.cardview.widget.CardView>
             <LinearLayout
                 android:orientation="horizontal"
