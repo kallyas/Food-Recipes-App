@@ -1,5 +1,6 @@
 package com.kally.recipesapp.view.category;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,6 +20,7 @@ import com.kally.recipesapp.R;
 import com.kally.recipesapp.Utils;
 import com.kally.recipesapp.adapter.RecyclerViewMealByCategory;
 import com.kally.recipesapp.model.Meals;
+import com.kally.recipesapp.view.detail.DetailActivity;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
@@ -26,6 +28,8 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+
+import static com.kally.recipesapp.view.home.HomeActivity.EXTRA_DETAIL;
 
 
 public class CategoryFragment extends Fragment implements CategoryView{
@@ -92,7 +96,10 @@ public class CategoryFragment extends Fragment implements CategoryView{
         adapter.notifyDataSetChanged();
 
         adapter.setOnItemClickListener((view, position) -> {
-            //TODO #8.2 make an intent to DetailActivity (get the name of the meal from the edit text view, then send the name of the meal to DetailActivity)
+            TextView mealName = view.findViewById(R.id.mealName);
+            Intent intent = new Intent(getActivity(), DetailActivity.class);
+            intent.putExtra(EXTRA_DETAIL, mealName.getText().toString());
+            startActivity(intent);
         });
     }
 
